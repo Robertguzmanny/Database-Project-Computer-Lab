@@ -176,6 +176,58 @@ VALUES
   (20757820,"M-W");
   Select* from daily_schedule;
   
+  DROP TABLE IF EXISTS `book_author`;
+
+CREATE TABLE `book_author` (
+  `book_id` int  UNIQUE NOT NULL,
+  `author` varchar(255) default NULL,
+  PRIMARY KEY (`book_id`)
+) AUTO_INCREMENT=1;
+
+INSERT INTO `book_author` (`book_id`,`author`)
+VALUES
+  (1692,"Giacomo"),
+  (1637,"Finn"),
+  (3883,"Lawrence"),
+  (2476,"Hakeem"),
+  (4286,"Cullen");
+   Select* from book_author;
+   
+   
+   DROP TABLE IF EXISTS `attend`;
+
+CREATE TABLE `attend` (
+  `EMPLID` int  UNIQUE NOT NULL,
+  `course_name` TEXT default NULL,
+  PRIMARY KEY (`EMPLID`)
+) AUTO_INCREMENT=1;
+
+INSERT INTO `attend` (`EMPLID`,`course_name`)
+VALUES
+  (50882769,"CMP426"),
+  (15167966,"CMP167"),
+  (67150394,"CMP426"),
+  (98506453,"CMP167"),
+  (11370387,"CMP167");
+  
+  Select* from attend;
+
+
+Select first_name, last_name from employee;
+Select work_info, title from employee_info;
+Select units, hours from course;
+Select EMPLID, email from student;
+Select learner, cause from student_needs;
+Select serial_num, manufacture from laptop;
+Select book_id, emplid_e from book;
+Select emplid_e, daily_schedule from daily_schedule;
+Select book_id, author from book_author;
+Select course_name, EMPLID from attend;
+
+
+	
+  
+  
   
   
   
